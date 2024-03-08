@@ -1,0 +1,46 @@
+$brand-color: #232946;
+
+:root {
+
+}
+
+$body-bg: $brand-color;
+$body-color: white;
+$text-color: white;
+
+
+.icon-color {
+  color: $body-color;
+}
+
+.app-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  color: $brand-color;
+  background-color: $text-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Source Sans 3", sans-serif;
+  letter-spacing: 0.2em;
+  display: flex;
+  align-items: center;
+}
+
+.brand-highlight {
+  background-color: $brand-color;
+  color: $text-color;
+  padding: 1px 9px 0 11px;
+}
+
+.brand-lowlight {
+  font-size: 0.6em;
+  color: #777777;
+  margin: 0 8px;
+}
+
+@import '~bootstrap/scss/bootstrap';

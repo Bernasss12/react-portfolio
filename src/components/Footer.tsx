@@ -8,13 +8,13 @@ function Footer() {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col">
-                        <a href="https://github.com/Bernasss12" className="link-dark text-decoration-none" target="_blank"
+                        <a href="https://github.com/Bernasss12" className="text-decoration-none" target="_blank"
                            rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faGithub} size='2x'/>
+                            <FontAwesomeIcon icon={faGithub} size='2x' className='icon-color'/>
                         </a>
-                        <a href="https://www.linkedin.com/in/bernardo-antunes-9151b818b/" className="link-dark text-decoration-none ms-3"
+                        <a href="https://www.linkedin.com/in/bernardo-antunes-9151b818b/" className="text-decoration-none ms-3"
                            target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin} size='2x'/>
+                            <FontAwesomeIcon icon={faLinkedin} size='2x' className='icon-color'/>
                         </a>
                     </div>
                     <div className="col text-end">
