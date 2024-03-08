@@ -1,13 +1,12 @@
-$brand-color: #232946;
-
-:root {
-
-}
+$brand-color: #222845;
 
 $body-bg: $brand-color;
 $body-color: white;
 $text-color: white;
 
+:root {
+  --bs-navbar-brand-color: $brand-color;
+}
 
 .icon-color {
   color: $body-color;
@@ -20,8 +19,8 @@ $text-color: white;
   justify-content: space-between;
 }
 
-.navbar-brand {
-  color: $brand-color;
+.navbar-brand, .navbar {
+  color: $brand-color !important;
   background-color: $text-color;
   text-transform: uppercase;
   font-weight: bold;

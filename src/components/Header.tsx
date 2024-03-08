@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand className="brand brand-padding col-auto" href="#">
+                <Navbar.Brand className="brand-padding col-auto" href="#">
                     <span className="brand-highlight">Bernardo Antunes</span>
                     <span className="brand-lowlight">aka</span>Bernasss12
                 </Navbar.Brand>
