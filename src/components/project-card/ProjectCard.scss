@@ -1,0 +1,18 @@
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* adjust to your needs */
+}
+
+.tech-icon {
+  flex: 1 0 auto;
+}
+
+.projects-card {
+  width: 18em;
+}
+
+.projects-card .card-text {
+  height: 18em;
+  overflow: hidden;
+}
