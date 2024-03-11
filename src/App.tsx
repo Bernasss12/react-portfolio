@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/theme.scss'
-import Footer from "./Footer";
-import Header from "./Header";
-import ProjectCard from "./project-card/ProjectCard";
-import {Project} from "../models/Project";
+import './styles/theme.scss'
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import ProjectCard from "./components/project-card/ProjectCard";
+import {Project} from "./models/Project";
 import {BrowserRouter as Router} from "react-router-dom";
 
 /*
@@ -51,9 +51,9 @@ function App() {
             <div className="app-content">
                 <Header/>
                 <div
-                    style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}> {/* Inline style for grid */}
+                    style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
                     {projects.map((project, index) => (
-                        <div style={{margin: '1rem'}}> {/* Inline style for cards */}
+                        <div style={{margin: '1rem'}}>
                             <ProjectCard key={index} {...project} />
                         </div>
                     ))}
