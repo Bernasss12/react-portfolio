@@ -1,5 +1,5 @@
 import React from "react";
-import { SiGithub, SiLinkedin } from "@icons-pack/react-simple-icons"
+import { SiGithub, SiLinkedin } from "react-icons/si"
 
 function Footer() {
     return (

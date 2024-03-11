@@ -4,7 +4,6 @@
   "homepage": "https://bernasss12.github.io/react-portfolio",
   "private": true,
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^9.4.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -17,6 +16,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "react-scripts": "5.0.1",
     "react-simple-icons": "^1.0.0-beta.5",
     "sass-loader": "^14.1.1",
