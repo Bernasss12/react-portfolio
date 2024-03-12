@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {SiJavascript, SiLinkedin, SiMaterialdesign, SiReact, SiTypescript} from "react-icons/si";
-import {FaQuestionCircle} from "react-icons/fa";
+import {SiAngular, SiJavascript, SiLinkedin, SiMaterialdesign, SiPython, SiReact, SiTypescript} from "react-icons/si";
+import {FaJava, FaQuestionCircle} from "react-icons/fa";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
 type Props = {
@@ -16,7 +16,10 @@ function TechIcon({size, icon, className, tooltip}: Props) {
         'typescript': <SiTypescript/>,
         'linkedin': <SiLinkedin/>,
         'javascript': <SiJavascript/>,
-        'materialdesign': <SiMaterialdesign/>
+        'materialdesign': <SiMaterialdesign/>,
+        'java': <FaJava/>,
+        'angular': <SiAngular/>,
+        'python': <SiPython/>
     };
 
     function cleanup(string: string): string {

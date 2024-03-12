@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/theme.scss'
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProjectCard from "./components/project-card/ProjectCard";
-import {Project} from "./models/Project";
 import {BrowserRouter as Router} from "react-router-dom";
+import Project from "./models/Project";
+import { parse } from 'yaml'
+import axios from "axios";
+import "./styles/global.css"
 
 /*
   TODO Change tooltip style.
@@ -13,38 +16,57 @@ import {BrowserRouter as Router} from "react-router-dom";
   TODO Maybe ditch the icon on the card and replace the link with the gh logo (when gh repo available)
  */
 
+declare var require: NodeRequire;
+
+interface NodeRequire {
+    context: (directory: string, useSubdirectories?: boolean, regExp?: RegExp) => any;
+}
+
 function App() {
 
-    const projects: Project[] = [
-        {
-            title: 'React Project',
-            url: '#',
-            shortDescription: 'This is a short desc.',
-            description: 'Phasellus tincidunt nulla vel ligula ornare suscipit. Sed varius urna sed nisi rhoncus bibendum. Phasellus ultrices, metus a rutrum consequat, enim diam posuere mauris, sed blandit felis ipsum ac risus. Donec nulla lectus, aliquam sed interdum ut, convallis vitae neque. Proin consectetur, neque ac tristique sodales, leo enim varius sem, ac condimentum risus lacus eu augue. Sed facilisis semper magna. Praesent vel risus ut turpis vulputate pulvinar ac id augue. Vestibulum non quam leo. Integer feugiat mauris in nunc cursus, et tincidunt nisl vestibulum. Vestibulum pulvinar augue est, nec bibendum mauris iaculis in.',
-            technologies: ['React', 'JavaScript', 'MaterialDesign', 'LinkedIn', 'JavaScript']
-        },
-        {
-            title: 'Azure Project',
-            url: '#',
-            shortDescription: 'This is a short desc.',
-            description: 'Curabitur dignissim elementum ante, non finibus libero fringilla nec. Donec consequat est eget massa faucibus, non elementum est finibus. Maecenas consequat erat a abitur vel tortor elit. Donec laoreet, quam ac sollicitudin ultricies, tortor est cursus augue, eget dapibus risus tortor at quam. Sed facilisis semper magna. Praesent vel risus ut turpis vulputate pulvinar ac id augue. Vestibulum non quam leo. Integer feugiat mauris in nunc cursus, et tincidunt nisl vestibulum. Vestibulum pulvinar augue est, nec bibendum mauris iaculis in.',
-            technologies: ['React', 'TypeScript']
-        },
-        {
-            title: 'TypeScript Project',
-            url: '#',
-            shortDescription: 'This is a short desc.',
-            description: 'Integer hendrerit fermentum risus, sit amet gravida sem eleifend ut. Maecenas sodales metus a nisi sodales, et tincidunt lectus dapibus. Ut et vestibulum sem. Duis et maximus nulla. Vivamus maximus consectetur enim nec congue. Morbi a purus mauris. Sed facilisis semper magna. Praesent vel risus ut turpis vulputate pulvinar ac id augue. Vestibulum non quam leo. Integer feugiat mauris in nunc cursus, et tincidunt nisl vestibulum. Vestibulum pulvinar augue est, nec bibendum mauris iaculis in.',
-            technologies: ['MaterialDesign']
-        },
-        {
-            title: 'Webpack Project',
-            url: '#',
-            shortDescription: 'This is a short desc.',
-            description: 'Sed facilisis semper magna. Praesent vel risus ut turpis vulputate pulvinar ac id augue. Vestibulum non quam leo. Integer feugiat mauris in nunc cursus, et tincidunt nisl vestibulum. Vestibulum pulvinar augue est, nec bibendum mauris iaculis in. Sed facilisis semper magna. Praesent vel risus ut turpis vulputate pulvinar ac id augue. Vestibulum non quam leo. Integer feugiat mauris in nunc cursus, et tincidunt nisl vestibulum. Vestibulum pulvinar augue est, nec bibendum mauris iaculis in.',
-            technologies: ['LinkedIn']
-        }
-    ];
+    const [projects, setProjects] = useState<Project[]>([])
+
+    useEffect(() => {
+        const requireContext = require.context('./content/projects/', false, /\.md$/);
+        const markdownFiles = requireContext.keys();
+
+        Promise.all(
+            markdownFiles.map(async (file: string) => {
+                const filePath = requireContext(file);
+                try {
+                    const fileContent = await axios.get(filePath, { responseType: 'text' })
+                    console.log("DATA")
+                    console.log(fileContent.data)
+                    console.log("/DATA/")
+                    const parts = fileContent.data.split("---")
+                    const yaml = parts[1]
+                    console.log("YAML")
+                    console.log(yaml)
+                    console.log("/YAML/")
+                    const markdown = parts[2]
+                    console.log("MD")
+                    console.log(markdown)
+                    console.log("/MD/")
+                    const metadata = parse(yaml)
+                    console.log("PARSED")
+                    console.log(metadata)
+                    console.log("/PARSED/")
+                    return {
+                        title: metadata.title,
+                        url: metadata.url,
+                        shortDescription: metadata.shortDescription,
+                        description: metadata.description,
+                        technologies: metadata.technologies,
+                        content: markdown
+                    }
+                } catch (error) {
+                    console.error("Error occur while fetching markdown file: ", error);
+                }
+            })
+        ).then((projectData) => {
+            setProjects(projectData);
+        });
+    }, []);
 
     return (
         <Router>

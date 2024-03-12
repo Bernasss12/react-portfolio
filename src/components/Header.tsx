@@ -1,6 +1,9 @@
 import React from "react";
 import {Nav, Navbar, Container} from "react-bootstrap";
 
+//TODO fix brighter brand background than rest of navbar
+//TODO make brand have newline if not enough space.
+
 const Header = () => {
     return (
         <Navbar bg="light" expand="lg">

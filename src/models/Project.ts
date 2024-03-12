@@ -1,22 +1,22 @@
 export class Project {
     title: string;
     url?: string;
-    shortDescription?: string;
     description?: string;
     technologies: string[];
+    content: string;
 
     constructor(
         title: string,
         url: string,
-        shortDescription: string,
         description: string,
-        technologies: string[]
+        technologies: string[],
+        content:string
     ) {
         this.title = title;
         this.url = url;
-        this.shortDescription = shortDescription;
         this.description = description;
         this.technologies = technologies;
+        this.content = content;
     }
 }
 

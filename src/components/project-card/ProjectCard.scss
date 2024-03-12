@@ -13,6 +13,28 @@
 }
 
 .projects-card .card-text {
-  height: 18em;
+  max-height: 18em;
   overflow: hidden;
+}
+
+.markdown-preview {
+  font-size: 0.8em;
+}
+
+.markdown-preview h1 {
+  font-size: 1.1em;
+}
+
+.markdown-preview h2 {
+  font-size: 1.05em;
+}
+
+.markdown-preview h3 {
+  font-size: 0.8em;
+}
+
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
+  font-size: 0.8rem;
 }
