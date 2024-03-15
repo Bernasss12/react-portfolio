@@ -1,0 +1,20 @@
+@import "variables";
+@import "navbar";
+
+
+:root {
+  --bs-emphasis-color-rgb: $brand-color;
+}
+
+.icon-color {
+  color: $body-color;
+}
+
+.app-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@import '~bootstrap/scss/bootstrap';

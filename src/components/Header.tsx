@@ -8,9 +8,11 @@ const Header = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Navbar.Brand className="brand-padding col-auto" href="#">
+                <Navbar.Brand className="col-auto brand-container" href="#">
                     <span className="brand-highlight">Bernardo Antunes</span>
-                    <span className="brand-lowlight">aka</span>Bernasss12
+                    <span className="brand-text">
+                        <span className="brand-lowlight">aka</span>Bernasss12
+                    </span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

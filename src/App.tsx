@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/theme.scss'
+import './styles/_global.scss'
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProjectCard from "./components/project-card/ProjectCard";
@@ -8,7 +8,6 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Project from "./models/Project";
 import { parse } from 'yaml'
 import axios from "axios";
-import "./styles/global.css"
 
 /*
   TODO Change tooltip style.
