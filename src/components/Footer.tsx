@@ -1,27 +1,29 @@
 import React from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si"
-import {Col, Container, Row} from "react-bootstrap";
 
 function Footer() {
     return (
-        <Container as="footer" className="mt-auto py-3 border-top px-3">
-            <Row className="align-items-center">
-                <Col>
-                    <a href="https://github.com/Bernasss12" className="text-decoration-none" target="_blank"
-                       rel="noopener noreferrer">
-                        <SiGithub size={32} className='icon-color'/>
-                    </a>
-                    <a href="https://www.linkedin.com/in/bernardo-antunes-9151b818b/"
-                       className="text-decoration-none ms-3"
-                       target="_blank" rel="noopener noreferrer">
-                        <SiLinkedin size={32} className='icon-color'/>
-                    </a>
-                </Col>
-                <Col className="text-end">
-                    <small className="text-muted">© 2024 Bernardo Antunes</small>
-                </Col>
-            </Row>
-        </Container>
+        <footer>
+
+        </footer>
+        // <Container as="footer" className="mt-auto py-3 border-top px-3">
+        //     <Row className="align-items-center">
+        //         <Col>
+        //             <a href="https://github.com/Bernasss12" className="text-decoration-none" target="_blank"
+        //                rel="noopener noreferrer">
+        //                 <SiGithub size={32} className='icon-color'/>
+        //             </a>
+        //             <a href="https://www.linkedin.com/in/bernardo-antunes-9151b818b/"
+        //                className="text-decoration-none ms-3"
+        //                target="_blank" rel="noopener noreferrer">
+        //                 <SiLinkedin size={32} className='icon-color'/>
+        //             </a>
+        //         </Col>
+        //         <Col className="text-end">
+        //             <small className="text-muted">© 2024 Bernardo Antunes</small>
+        //         </Col>
+        //     </Row>
+        // </Container>
     );
 }
 
