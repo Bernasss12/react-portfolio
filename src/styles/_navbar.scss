@@ -1,6 +1,6 @@
 .brand-highlight {
-  background-color: $brand-color;
-  color: $text-color;
+  background-color: $light;
+  color: $primary;
   padding: 1px 9px 0 11px;
 }
 
@@ -12,6 +12,7 @@
 }
 
 .brand-text {
+  color: $primary;
   display: flex;
   align-items: center;
 }
@@ -39,7 +40,7 @@
 
 .navbar-toggler-icon {
   background-image: none !important;
-  background-color: $brand-color;
+  background-color: $primary;
   height: 3px !important;
   width: 25px !important;
   margin: 10px 0;
@@ -50,7 +51,7 @@
 
 .navbar-toggler-icon::before {
   display: block;
-  background-color: $brand-color;
+  background-color: $primary;
   height: 3px;
   content: "";
   position: relative;
@@ -61,7 +62,7 @@
 
 .navbar-toggler-icon::after {
   display: block;
-  background-color: $brand-color;
+  background-color: $primary;
   height: 3px;
   content: "";
   position: relative;

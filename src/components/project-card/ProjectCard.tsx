@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {Project} from "../../models/Project";
 import {Card} from "react-bootstrap";
-import './ProjectCard.scss'
 import {FaGithub, FaLink} from "react-icons/fa"
 import TechIcon from "./TechIcon";
 import ReactMarkdown from "react-markdown"

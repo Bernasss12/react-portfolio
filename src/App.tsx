@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import ProjectCard from "./components/project-card/ProjectCard";
 import {BrowserRouter as Router} from "react-router-dom";
 import Project from "./models/Project";
-import { parse } from 'yaml'
+import {parse} from 'yaml'
 import axios from "axios";
 
 /*
@@ -33,7 +33,7 @@ function App() {
             markdownFiles.map(async (file: string) => {
                 const filePath = requireContext(file);
                 try {
-                    const fileContent = await axios.get(filePath, { responseType: 'text' })
+                    const fileContent = await axios.get(filePath, {responseType: 'text'})
                     console.log("DATA")
                     console.log(fileContent.data)
                     console.log("/DATA/")
@@ -66,6 +66,8 @@ function App() {
             setProjects(projectData);
         });
     }, []);
+
+    document.body.dataset.bsTheme = 'custom-dark'
 
     return (
         <Router>

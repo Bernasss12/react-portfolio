@@ -1,5 +1,112 @@
-$brand-color: #222845;
-$body-color: white;
-$text-color: white;
-$body-bg: $brand-color;
-$tooltip-color: white;
+//$brand-color: #222845;
+//$brand-contrast-color: #ECE5F0;
+//$success-color: #69dc9e;
+//$warning-color: #E98A15;
+//$danger-color: #B02E0C;
+
+//$body-color: white;
+//$tooltip-color: white;
+
+:root,
+[data-bs-theme="custom-dark"] {
+  $theme-colors: (
+          "light": #d7f2ef,
+          "dark": #000405,
+          "primary": #5d3593,
+          "secondary": #733fbb,
+          "info": #3a235e,
+          "accent1": #263066,
+          "accent2": #5c5e60,
+          "accent3": #60569a,
+          "success": #2c9560,
+          "warning": #dac82f,
+          "danger": #e32e19,
+  );
+
+  $light: #d7f2ef;
+  $dark: #000405;
+  $primary: #5d3593;
+  $secondary: #733fbb;
+  $info: #3a235e;
+  $success: #2c9560;
+  $warning: #dac82f;
+  $danger: #e32e19;
+}
+
+$white: #ffffff;
+$light: #eee;
+$dark: #1d1735;
+$primary: #272e6f;
+$secondary: #e7294a;
+$info: #07b999;
+$success: #02a35e;
+$warning: #e1cb02;
+$danger: #f01c01;
+
+//  $primary: $brand-contrast-color;
+//  $secondary: $brand-color;
+//  $dark: $brand-contrast-color;
+//  $light: $brand-color;
+//
+//  $text-color: white;
+//  $body-bg: $brand-color;
+//
+//  $primary: white;
+//  $light: $brand-color;
+//}
+
+[data-bs-theme="fun-dark"] {
+  $white: #222845;
+
+  --bs-primary: #fa4cb6;
+  --bs-secondary: #e50077;
+  --bs-success: #00a973;
+  --bs-info: #bb0f6b;
+  --bs-warning: #d7d100;
+  --bs-danger: #e43d00;
+  --bs-light: #010314;
+  --bs-dark: #0beeff;
+
+  $theme-colors: (
+          "light": #010314,
+          "dark": #0beeff,
+          "primary": #fa4cb6,
+          "secondary": #e50077,
+          "info": #bb0f6b,
+          "accent1": #0fb99e,
+          "accent2": #258878,
+          "accent3": #215665,
+          "success": #00a973,
+          "warning": #d7d100,
+          "danger": #e43d00,
+  );
+}
+
+//$white: #222845;
+//
+//$light:      #010314;
+//$dark:       #0beeff;
+//$primary:    #fa4cb6;
+//$secondary:  #e50077;
+//$info:       #bb0f6b;
+//$accent1:    #0fb99e;
+//$accent2:    #258878;
+//$accent3:    #215665;
+//$success:    #00a973;
+//$warning:    #d7d100;
+//$danger:     #e43d00;
+
+
+//$brand-color: #222845;
+//
+//$primary: $brand-contrast-color;
+//$secondary: $brand-color;
+//$dark: $brand-contrast-color;
+//$light: $brand-color;
+
+//$brand-color: white;
+//$body-color: #222845;
+//$text-color: #222845;
+//$body-bg: white;
+//$tooltip-color: white;
+

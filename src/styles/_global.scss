@@ -1,13 +1,19 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/mixins";
+
 @import "variables";
+@import "node_modules/bootstrap/scss/variables";
+
 @import "navbar";
+@import "project_card";
 
-
-:root {
-  --bs-emphasis-color-rgb: $brand-color;
-}
+//
+//:root {
+//  --bs-emphasis-color-rgb: $brand-color;
+//}
 
 .icon-color {
-  color: $body-color;
+  color: $secondary;
 }
 
 .app-content {

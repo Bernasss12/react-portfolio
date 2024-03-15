@@ -6,7 +6,7 @@ import {Nav, Navbar, Container} from "react-bootstrap";
 
 const Header = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar expand="lg">
             <Container fluid>
                 <Navbar.Brand className="col-auto brand-container" href="#">
                     <span className="brand-highlight">Bernardo Antunes</span>

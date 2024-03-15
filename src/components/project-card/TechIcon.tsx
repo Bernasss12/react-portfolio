@@ -32,14 +32,13 @@ function TechIcon({size, icon, className, tooltip}: Props) {
     }
 
     const renderTooltip = (props: any) => (
-        console.log("Show tooltip"),
         <Tooltip id="button-tooltip" {...props}>
             {tooltip}
         </Tooltip>
     );
 
     return (
-        <div className="tech-icon">
+        <div className="tech-icon icon-color">
             {tooltip ?
                 <OverlayTrigger
                     placement="right"
