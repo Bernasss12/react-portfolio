@@ -5,7 +5,9 @@ import React from "react";
 
 const Header = () => {
     return (
-        <></>
+        <div className="navbar">
+            A
+        </div>
         // <Navbar bg="light" expand="lg">
         //     <Container fluid>
         //         <Navbar.Brand className="col-auto brand-container" href="#">

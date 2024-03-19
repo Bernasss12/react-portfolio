@@ -3,3 +3,11 @@ $body-color: white;
 $text-color: white;
 $body-bg: $brand-color;
 $tooltip-color: white;
+
+:root {
+  --background-color: #222845;
+  --accent-color-1: #d5363e;
+  --accent-color-2: #e2ca48;
+  //--accent-color-2-muted: darken(var(--accent-color-2), 50%);
+  --accent-color-2-muted: #7a6d26;
+}

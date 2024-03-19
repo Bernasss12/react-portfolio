@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/_global.scss'
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -70,7 +69,7 @@ function App() {
 
     return (
         <Router>
-            <div className="app-content">
+            <div className="wrapper">
                 {/*<Header/>*/}
                 {/*<div*/}
                 {/*    style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>*/}
@@ -80,6 +79,7 @@ function App() {
                 {/*        </div>*/}
                 {/*    ))}*/}
                 {/*</div>*/}
+                <div className="content"></div>
                 <Footer/>
             </div>
         </Router>

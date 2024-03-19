@@ -1,0 +1,94 @@
+$directions: (
+                ("t", "top"),
+                ("r", "right"),
+                ("b", "bottom"),
+                ("l", "left"),
+);
+
+$directions: (
+                ("t", "top"),
+                ("r", "right"),
+                ("b", "bottom"),
+                ("l", "left"),
+);
+
+@for $i from 0 through 12 {
+  @each $abbr, $dir in $directions {
+    .m-#{$abbr}-#{$i} {
+      @each $single_dir in $dir {
+        margin-#{$single_dir}: #{$i}em;
+      }
+    }
+    .p-#{$abbr}-#{$i} {
+      @each $single_dir in $dir {
+        padding-#{$single_dir}: #{$i}em;
+      }
+    }
+    .mr-#{$abbr}-#{$i} {
+      @each $single_dir in $dir {
+        margin-#{$single_dir}: #{$i}rem;
+      }
+    }
+    .pr-#{$abbr}-#{$i} {
+      @each $single_dir in $dir {
+        padding-#{$single_dir}: #{$i}rem;
+      }
+    }
+  }
+
+  .m-#{$i} {
+    margin: #{$i}em;
+  }
+
+  .mr-#{$i} {
+    margin: #{$i}rem;
+  }
+
+  .p-#{$i} {
+    padding: #{$i}em;
+  }
+
+  .pr-#{$i} {
+    padding: #{$i}rem;
+  }
+
+  .m-x-#{$i} {
+    margin-left: #{$i}em;
+    margin-right: #{$i}em;
+  }
+
+  .m-y-#{$i} {
+    margin-top: #{$i}em;
+    margin-bottom: #{$i}em;
+  }
+
+  .p-x-#{$i} {
+    padding-left: #{$i}em;
+    padding-right: #{$i}em;
+  }
+
+  .p-y-#{$i} {
+    padding-top: #{$i}em;
+    padding-bottom: #{$i}em;
+  }
+
+  .mr-x-#{$i} {
+    margin-left: #{$i}rem;
+    margin-right: #{$i}rem;
+  }
+
+  .mr-y-#{$i} {
+    margin-top: #{$i}rem;
+    margin-bottom: #{$i}rem;
+  }
+
+  .pr-x-#{$i} {
+    padding-left: #{$i}rem;
+    padding-right: #{$i}rem;
+  }
+
+  .pr-y-#{$i} {
+    padding-top: #{$i}rem;
+    padding-bottom: #{$i}rem;
+  }
+}

@@ -1,23 +1,53 @@
 @import "variables";
 @import "navbar";
+@import "generated";
 
-footer {
-
-}
-
-:root {
-  --bs-emphasis-color-rgb: $brand-color;
-}
-
-.icon-color {
-  color: $body-color;
-}
-
-.app-content {
+.wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-@import '~bootstrap/scss/bootstrap';
+* {
+  box-sizing: border-box;
+}
+
+html, body, .wrapper {
+  background-color: var(--background-color);
+  color: var(--accent-color-2);
+  font-family: NotoSans, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+footer::before {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon {
+  color: var(--accent-color-2);
+}
+
+.muted {
+  color: var(--accent-color-2-muted);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
