@@ -1,6 +1,10 @@
 @import "variables";
-@import "navbar";
+@import "header";
 @import "generated";
+
+.sr-only {
+
+}
 
 .wrapper {
   min-height: 100vh;
@@ -22,12 +26,6 @@ html, body, .wrapper {
   height: 100%;
 }
 
-footer::before {
-  content: '';
-  display: block;
-  position: absolute;
-}
-
 footer {
   flex-shrink: 0;
 }
@@ -35,6 +33,11 @@ footer {
 .row {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.space-between {
   justify-content: space-between;
 }
 
@@ -43,7 +46,7 @@ footer {
 }
 
 .muted {
-  color: var(--accent-color-2-muted);
+  color: var(--accent-color-muted);
 }
 
 .center {

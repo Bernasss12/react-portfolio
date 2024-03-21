@@ -1,0 +1,189 @@
+.brand {
+  background-color: var(--accent-color-1);
+  color: var(--background-color);
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Source Sans 3", sans-serif;
+  letter-spacing: 0.2em;
+  display: flex;
+  align-items: center;
+  padding: 0.2em 0.22em 0.15em 0.43em;
+}
+
+nav, .navigation ul, .navigation {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+header div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+
+  height: 100%;
+
+  transition: all 0.15s ease-out;
+}
+
+.navigation li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation li a {
+  display: flex;
+  text-decoration: none;
+  color: var(--accent-color-1);
+  align-items: center;
+  position: relative;
+}
+
+.navigation li a::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: var(--accent-color-1);
+
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+
+  transition: all ease-in-out 250ms;
+}
+
+.navigation li a:hover::after {
+  //width: 100%;
+  transform: scale(1,1);
+}
+
+@media (max-width: 768px) {
+  /* Very thin mode, menu fills whole screen. */
+  .navigation {
+    // Fill the whole screen
+    position: fixed;
+    inset: 0 0 0 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+    // Align links in the middle
+    flex-flow: column;
+    padding-top: 2em;
+    justify-content: flex-start;
+    gap: 0;
+
+    // Blurred background
+    background: hsla(0, 0%, 100%, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
+  .navigation li {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+
+  .navigation li a {
+    width: 100%;
+    padding: 0.5em 2em;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .navigation li a::after {
+    bottom: 0;
+  }
+
+  .navigation li a:hover {
+    background-color: hsl(0 0% 0% / 0.1 );
+  }
+}
+
+@media (max-width: 500px) {
+  /* Very thin mode, menu fills whole screen. */
+  .navigation {
+    // Fill the whole screen
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .navigation li a {
+    padding: 0.5em 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* toggler icon */
+
+.mobile-nav-toggle {
+  background-image: none !important;
+  background-color: var(--accent-color-1);
+  height: 3px !important;
+  width: 25px !important;
+  margin: 10px 0;
+  position: relative;
+  transition: all 0.35s ease-out;
+  transform-origin: center;
+}
+
+.mobile-nav-toggle::before {
+  display: block;
+  background-color: var(--accent-color-1);
+  height: 3px;
+  content: "";
+  position: relative;
+  top: -7px;
+  transition: all 0.15s ease-out;
+  transform-origin: center;
+}
+
+.mobile-nav-toggle::after {
+  display: block;
+  background-color: var(--accent-color-1);
+  height: 3px;
+  content: "";
+  position: relative;
+  top: 4px;
+  transition: all 0.35s ease-out;
+  transform-origin: center;
+}
+
+.navbar-dark .mobile-nav-toggle,
+.navbar-dark .mobile-nav-toggle::before,
+.navbar-dark .mobile-nav-toggle::after {
+  background-color: var(--bs-body-color);
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler:hover, .navbar-toggler:focus {
+  border: none !important;
+}
+
+.navbar-toggler:not(.collapsed) .mobile-nav-toggle {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .mobile-nav-toggle::before {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .mobile-nav-toggle::after {
+  transform: rotate(-90deg) translateX(7px);
+}

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {SiAngular, SiJavascript, SiLinkedin, SiMaterialdesign, SiPython, SiReact, SiTypescript} from "react-icons/si";
 import {FaJava, FaQuestionCircle} from "react-icons/fa";
+import {DiAndroid} from "react-icons/di"
 
 type Props = {
     size?: number

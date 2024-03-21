@@ -4,10 +4,22 @@ $text-color: white;
 $body-bg: $brand-color;
 $tooltip-color: white;
 
-:root {
+$padding-base: 1;
+$padding-multiplier: 0.25;
+$margin-base: 1;
+$margin-multiplier: 0.25;
+
+html {
+  --spacer: 0.5;
   --background-color: #222845;
   --accent-color-1: #d5363e;
   --accent-color-2: #e2ca48;
-  //--accent-color-2-muted: darken(var(--accent-color-2), 50%);
-  --accent-color-2-muted: #7a6d26;
+  --accent-color-muted: #7a6d26;
+}
+
+html[data-theme="light"] {
+  --background-color: lightgray;
+  --accent-color-1: #222845;
+  --accent-color-2: #d5363e;
+  --accent-color-muted: darken(#d5363e, 10%);
 }

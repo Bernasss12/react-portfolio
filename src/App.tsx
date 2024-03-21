@@ -67,10 +67,12 @@ function App() {
         // });
     }, []);
 
+    //document.documentElement.setAttribute('data-theme', 'light');
+
     return (
         <Router>
-            <div className="wrapper">
-                {/*<Header/>*/}
+            <div className="wrapper" data-theme="light">
+                <Header/>
                 {/*<div*/}
                 {/*    style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>*/}
                 {/*    {projects.map((project, index) => (*/}

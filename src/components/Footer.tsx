@@ -6,18 +6,18 @@ import {SiGithub, SiLinkedin} from "react-icons/si"
 function Footer() {
     return (
         <footer>
-            <div className="row p-x-4 p-b-2">
+            <div className="row space-between px-4 py-4">
                 <div className="center">
                     <a href="https://github.com/Bernasss12"
                        target="_blank"
                        rel="noopener noreferrer">
-                        <SiGithub size={32} className='icon'/>
+                        <SiGithub size={24} className='icon'/>
                     </a>
                     <a href="https://www.linkedin.com/in/bernardo-antunes-9151b818b/"
-                       className="m-x-1"
+                       className="ml-3"
                        target="_blank"
                        rel="noopener noreferrer">
-                        <SiLinkedin size={32} className='icon'/>
+                        <SiLinkedin size={24} className='icon'/>
                     </a>
                 </div>
                 <div className="center">

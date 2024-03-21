@@ -1,9 +1,4 @@
-$directions: (
-                ("t", "top"),
-                ("r", "right"),
-                ("b", "bottom"),
-                ("l", "left"),
-);
+@import "variables";
 
 $directions: (
                 ("t", "top"),
@@ -12,83 +7,86 @@ $directions: (
                 ("l", "left"),
 );
 
-@for $i from 0 through 12 {
+@for $i from 0 through 100 {
+  $padding-increment: $padding-base * $padding-multiplier * $i;
+  $margin-increment: $margin_base * $margin-multiplier * $i;
+
   @each $abbr, $dir in $directions {
-    .m-#{$abbr}-#{$i} {
+    .m#{$abbr}-#{$i} {
       @each $single_dir in $dir {
-        margin-#{$single_dir}: #{$i}em;
+        margin-#{$single_dir}: #{$margin-increment}em;
       }
     }
-    .p-#{$abbr}-#{$i} {
+    .p#{$abbr}-#{$i} {
       @each $single_dir in $dir {
-        padding-#{$single_dir}: #{$i}em;
+        padding-#{$single_dir}: #{$padding-increment}em;
       }
     }
-    .mr-#{$abbr}-#{$i} {
+    .rm#{$abbr}-#{$i} {
       @each $single_dir in $dir {
-        margin-#{$single_dir}: #{$i}rem;
+        margin-#{$single_dir}: #{$margin-increment}rem;
       }
     }
-    .pr-#{$abbr}-#{$i} {
+    .rp#{$abbr}-#{$i} {
       @each $single_dir in $dir {
-        padding-#{$single_dir}: #{$i}rem;
+        padding-#{$single_dir}: #{$padding-increment}rem;
       }
     }
   }
 
   .m-#{$i} {
-    margin: #{$i}em;
+    margin: #{$margin-increment}em;
   }
 
-  .mr-#{$i} {
-    margin: #{$i}rem;
+  .rm-#{$i} {
+    margin: #{$margin-increment}rem;
   }
 
   .p-#{$i} {
-    padding: #{$i}em;
+    padding: #{$padding-increment}em;
   }
 
-  .pr-#{$i} {
-    padding: #{$i}rem;
+  .rp-#{$i} {
+    padding: #{$padding-increment}rem;
   }
 
-  .m-x-#{$i} {
-    margin-left: #{$i}em;
-    margin-right: #{$i}em;
+  .mx-#{$i} {
+    margin-left: #{$margin-increment}em;
+    margin-right: #{$margin-increment}em;
   }
 
-  .m-y-#{$i} {
-    margin-top: #{$i}em;
-    margin-bottom: #{$i}em;
+  .my-#{$i} {
+    margin-top: #{$margin-increment}em;
+    margin-bottom: #{$margin-increment}em;
   }
 
-  .p-x-#{$i} {
-    padding-left: #{$i}em;
-    padding-right: #{$i}em;
+  .px-#{$i} {
+    padding-left: #{$padding-increment}em;
+    padding-right: #{$padding-increment}em;
   }
 
-  .p-y-#{$i} {
-    padding-top: #{$i}em;
-    padding-bottom: #{$i}em;
+  .py-#{$i} {
+    padding-top: #{$padding-increment}em;
+    padding-bottom: #{$padding-increment}em;
   }
 
-  .mr-x-#{$i} {
-    margin-left: #{$i}rem;
-    margin-right: #{$i}rem;
+  .rmx-#{$i} {
+    margin-left: #{$margin-increment}rem;
+    margin-right: #{$margin-increment}rem;
   }
 
-  .mr-y-#{$i} {
-    margin-top: #{$i}rem;
-    margin-bottom: #{$i}rem;
+  .rmy-#{$i} {
+    margin-top: #{$margin-increment}rem;
+    margin-bottom: #{$margin-increment}rem;
   }
 
-  .pr-x-#{$i} {
-    padding-left: #{$i}rem;
-    padding-right: #{$i}rem;
+  .rpx-#{$i} {
+    padding-left: #{$padding-increment}rem;
+    padding-right: #{$padding-increment}rem;
   }
 
-  .pr-y-#{$i} {
-    padding-top: #{$i}rem;
-    padding-bottom: #{$i}rem;
+  .rpy-#{$i} {
+    padding-top: #{$padding-increment}rem;
+    padding-bottom: #{$padding-increment}rem;
   }
 }
