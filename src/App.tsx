@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import './styles/_global.scss'
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import ProjectCard from "./components/project-card/ProjectCard";
 import {BrowserRouter as Router} from "react-router-dom";
 import Project from "./models/Project";
-import { parse } from 'yaml'
+import {parse} from 'yaml'
 import axios from "axios";
 
 /*
@@ -71,7 +71,7 @@ function App() {
 
     return (
         <Router>
-            <div className="wrapper" data-theme="light">
+            <Wrapper>
                 <Header/>
                 {/*<div*/}
                 {/*    style={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>*/}
@@ -81,10 +81,24 @@ function App() {
                 {/*        </div>*/}
                 {/*    ))}*/}
                 {/*</div>*/}
-                <div className="content"></div>
+                <div className="grow p-4">
+                    {/*<p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p>*/}
+                    {/*<p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p>*/}
+                    {/*<p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p>*/}
+                    {/*<p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p><p>Test</p>*/}
+                    {/*<p>Test</p><p>Test</p><p>Test</p><p>Test</p>*/}
+                </div>
                 <Footer/>
-            </div>
+            </Wrapper>
         </Router>
+    );
+}
+
+function Wrapper({children}: { children: React.ReactNode }) {
+    return (
+        <div className="flex min-h-screen flex-col justify-between bg-primary text-secondary">
+            { children }
+        </div>
     );
 }
 
